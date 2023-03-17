@@ -1,0 +1,38 @@
+[
+  {
+    "username": "Noah",
+    "email": "noah@hotmail.com",
+    "phone": "5544332211",
+    "password": "password1234"
+  },
+  {
+    "username": "Jules",
+    "email": "jules@hotmail.com",
+    "phone": "5533221100",
+    "password": "1234password"
+  },
+  {
+    "username": "Patrick",
+    "email": "patrick@hotmail.com",
+    "phone": "5566778899",
+    "password": "bblink182"
+  },
+  {
+    "username": "Louie",
+    "email": "louie@hotmail.com",
+    "phone": "5588997744",
+    "password": "parcels1234"
+  },
+  {
+    "username": "Ellie",
+    "email": "ellie@gmail.com",
+    "phone": "5512398745",
+    "password": "nopunintendedvol1"
+  },
+  {
+    "username": "Tess",
+    "email": "tess@gmail.com",
+    "phone": "5578965412",
+    "password": "fedrasucks1234"
+  }
+]
