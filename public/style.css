@@ -10,46 +10,6 @@ body {
   background-color: var(--color-three);
 }
 
-h1 {
-  color: white;
-  font-size: 35px;
-}
-
-li {
-  color: var(--color-two);
-  font-size: 30px;
-}
-
-.post-container {
-  border-color: var(--color-one);
-}
-h2 {
-  color: white;
-}
-p {
-  color: var(--color-five);
-}
-
-form {
-  border-color: #61892f;
-  background-color: white;
-  margin: 0 auto;
-  width: 30%;
-}
-
-input {
-  background-color: var(--color-five);
-}
-
-.form-btn {
-  background-color: var(--color-two);
-  color: white;
-}
-
-#signUp {
-  color: var(--color-one);
-}
-
 nav ul {
   list-style: none;
   margin: 0;
@@ -69,4 +29,69 @@ nav a {
 
 nav a:hover {
   color: var(--color-two);
+}
+
+h1 {
+  color: white;
+  font-size: 35px;
+}
+
+li {
+  color: var(--color-two);
+  font-size: 30px;
+}
+
+.post-container,
+#new-post {
+  border-color: var(--color-one);
+}
+
+h4 {
+  color: var(--color-two);
+}
+
+h2 {
+  color: white;
+}
+p {
+  color: var(--color-five);
+}
+
+#newPostFormBtn {
+  border-color: var(--color-two);
+  background-color: var(--color-two);
+  color: white;
+}
+
+form {
+  border-color: #61892f;
+  background-color: white;
+  margin: 0 auto;
+  width: 30%;
+}
+
+#new-post,
+#delete-update-post {
+  background-color: #222629;
+}
+
+textarea {
+  background-color: var(--color-five);
+}
+
+input {
+  background-color: var(--color-five);
+  opacity: 0.4;
+}
+input::placeholder {
+  color: black;
+}
+
+.form-btn {
+  background-color: var(--color-two);
+  color: white;
+}
+
+#signUp {
+  color: var(--color-one);
 }
