@@ -7,7 +7,7 @@ const hbs = handlebars.create({
   // Specify the folder for partials
   partialsDir: 'views/partials',
   // Specify the layout template
-  defaultLayout: 'views/layouts',
+  defaultLayout: 'views/layouts/main',
 });
 
 const app = express();
@@ -21,10 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
-
-// app.get('/', function (req, res) {
-//   res.render('main');
-// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on Port 3000'));
