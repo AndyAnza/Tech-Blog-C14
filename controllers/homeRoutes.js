@@ -28,31 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-//DASHBOARD ROUTE - SHOW USER POSTS
-// router.get('/dashboard', withAuth, async (req, res) => {
-//   try {
-//     const userId = req.session.userId;
-//     const userData = await User.findByPk(userId, {
-//       include: [{ model: Post }],
-//     });
-//     const userPosts = userData.get({ plain: true });
-
-//     if (!userData) {
-//       res.status(404).json({ message: 'No user found with that id!' });
-//       return;
-//     }
-//     console.log(userPosts);
-//     res.render('pages/dashboard', {
-//       id: userId,
-//       userPosts,
-//       countVisit: req.session.countVisit,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
+//DASHBOARD ROUTE - SHOW USERS POSTS
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const userId = req.session.userId;
@@ -93,6 +69,27 @@ router.post('/dashboard', withAuth, async (req, res) => {
       userId,
     });
     res.status(202).json({ message: 'Post created', post: newPost });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+//DELETE POST IN DASHBOARD
+router.delete('/:userId/:postId', withAuth, async (req, res) => {
+  try {
+    const { userId, postId } = req.params;
+
+    const deletePost = await Post.destroy({
+      where: {
+        id: postId,
+      },
+    });
+
+    if (deletePost === 0) {
+      return res.status(404).json({ error: 'Post not found' });
+    }
+
+    res.status(204).end();
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
