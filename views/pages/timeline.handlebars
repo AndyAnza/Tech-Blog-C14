@@ -1,3 +1,6 @@
+{{#if loggedIn}}
+<h2>Welcome, {{user.username}} 💻 </h2>
+{{/if}}
 {{#each posts as |post|}}
 {{> cardPost}}
 {{/each}}
