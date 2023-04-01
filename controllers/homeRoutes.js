@@ -28,6 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//DASHBOARD ROUTE
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const userId = req.session.userId;
@@ -52,10 +53,22 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-//DASHBOARD ROUTE
-// router.get('/dashboard', (req, res) => {
-//   res.render('pages/dashboard');
-// });
+//CREATE NEW POST IN DASHBOARD
+router.post('/dashboard', withAuth, async (req, res) => {
+  try {
+    const { title, content } = req.body;
+    const userId = req.session.userId;
+    console.log(userId);
+    const newPost = await Post.create({
+      title,
+      content,
+      userId,
+    });
+    res.status(202).json({ message: 'Post created', post: newPost });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 //LOGIN ROUTE
 router.get('/login', (req, res) => {

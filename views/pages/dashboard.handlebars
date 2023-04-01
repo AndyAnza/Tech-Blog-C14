@@ -1,13 +1,13 @@
 {{#if loggedIn}}
   <form
-    id='new-post'
+    id='newPostForm'
     method='post'
     class='grid place-content-left pb-32 rounded w-3/4 px-8 border-2 pt-8'
   >
     <h4 class='text-3xl'>New Post</h4>
     <input
       type='text'
-      id='fname'
+      id='title'
       name='title'
       placeholder='title'
       class='px-2 py-2 mt-4 mb-2 rounded'
@@ -26,3 +26,5 @@
     </button>
   </form>
 {{/if}}
+
+{{!-- {{#each userData.post}} --}}
