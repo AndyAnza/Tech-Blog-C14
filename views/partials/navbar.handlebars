@@ -5,9 +5,10 @@
     {{#if loggedIn}}
       <li><a href='/dashboard'>dashboard</a></li>
     {{/if}}
-    <li><a href='/login'>login</a></li>
     {{#if loggedIn}}
       <li><button id='logout'>logout</button></li>
+    {{else}}
+      <li><a href='/login'>login</a></li>
     {{/if}}
   </ul>
 </nav>
