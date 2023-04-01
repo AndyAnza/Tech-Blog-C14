@@ -44,7 +44,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     const user = await User.findOne({ where: { id: userId } });
     const username = user.username;
-    console.log(userPosts);
+    // console.log(userPosts);
     res.render('pages/dashboard', {
       id: userId,
       username,
@@ -58,23 +58,24 @@ router.get('/dashboard', withAuth, async (req, res) => {
 });
 
 //CREATE NEW POST IN DASHBOARD
-router.post('/dashboard', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const { title, content } = req.body;
-    const userId = req.session.userId;
-    console.log(userId);
+    const user_id = req.session.userId; // Assuming withAuth middleware sets this value
+    // console.log(user_id);
     const newPost = await Post.create({
       title,
       content,
-      userId,
+      user_id,
     });
+    console.log(newPost);
     res.status(202).json({ message: 'Post created', post: newPost });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-//DELETE POST IN DASHBOARD
+//DELETE POST
 router.delete('/:userId/:postId', withAuth, async (req, res) => {
   try {
     const { userId, postId } = req.params;
