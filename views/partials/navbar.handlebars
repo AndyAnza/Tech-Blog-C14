@@ -1,9 +1,14 @@
 <nav>
   <ul class='mx-20 my-4'>
-    <li class='text-5xl text-left'>TECH BLOG</li>
+    <li class='text-5xl text-left'><a href='/'>TECH BLOG</a></li>
     <li><a href='/'>home</a></li>
-    <li><a href='/dashboard'>dashboard</a></li>
+    {{#if loggedIn}}
+      <li><a href='/dashboard'>dashboard</a></li>
+    {{/if}}
     <li><a href='/login'>login</a></li>
+    {{#if loggedIn}}
+      <li><button id='logout'>logout</button></li>
+    {{/if}}
     <li><a href='/signIn'>Sign In</a></li>
   </ul>
 </nav>

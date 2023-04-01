@@ -1,7 +1,37 @@
 [
   {
-    "title": "MVC",
-    "content": "Lets talk about MVC",
+    "title": "5 Reasons Why Node.js Is Perfect for Building APIs",
+    "content": "Node.js is a popular choice for building APIs because it's fast, scalable, and easy to work with. In this post, we'll explore some of the top reasons why Node.js is the perfect choice for building APIs.",
     "user_id": 1
+  },
+  {
+    "title": "How to Build a Full-Stack JavaScript App with React and Node.js",
+    "content": "Building full-stack JavaScript apps is becoming increasingly popular. In this post, we'll explore how to build a full-stack app using React and Node.js, and discuss some of the key considerations and best practices to keep in mind.",
+    "user_id": 2
+  },
+  {
+    "title": "The Pros and Cons of Using MongoDB as Your Database for Node.js Apps",
+    "content": "MongoDB is a popular NoSQL database that's frequently used in Node.js apps. In this post, we'll take a closer look at some of the pros and cons of using MongoDB for your Node.js apps, and discuss some of the key considerations you should keep in mind.",
+    "user_id": 3
+  },
+  {
+    "title": "How to Implement Authentication in a React-Node.js App",
+    "content": "Authentication is an important aspect of many web applications. In this post, we'll explore how to implement authentication in a React-Node.js app, and discuss some of the key considerations and best practices to keep in mind.",
+    "user_id": 4
+  },
+  {
+    "title": "Using React Native to Build Mobile Apps with a Web Developer Background",
+    "content": "React Native is a popular choice for building mobile apps with a web development background. In this post, we'll explore how to use React Native to build mobile apps, and discuss some of the key considerations and best practices to keep in mind.",
+    "user_id": 5
+  },
+  {
+    "title": "Tips for Debugging Node.js Applications",
+    "content": "Debugging Node.js applications can be challenging, especially for new developers. In this post, we'll explore some tips and tricks for debugging Node.js applications effectively, and discuss some common pitfalls to avoid.",
+    "user_id": 1
+  },
+  {
+    "title": "Best Practices for Deploying Node.js Apps to Production",
+    "content": "Deploying Node.js apps to production requires careful planning and consideration. In this post, we'll explore some best practices for deploying Node.js apps to production, and discuss some of the key considerations and challenges you may encounter along the way.",
+    "user_id": 3
   }
 ]
