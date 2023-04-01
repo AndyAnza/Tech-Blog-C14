@@ -2,9 +2,10 @@ async function newFormHandler(event) {
   event.preventDefault();
   const title = document.querySelector('#title').value;
   const content = document.querySelector('#content').value;
-
+  // console.log(title);
+  // console.log(content);
   try {
-    const response = await fetch('/dashboard', {
+    const response = await fetch('/', {
       method: 'POST',
       body: JSON.stringify({
         title,
