@@ -51,6 +51,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       userPosts,
       countVisit: req.session.countVisit,
       loggedIn: req.session.loggedIn,
+      // created_at,
     });
   } catch (err) {
     res.status(500).json(err);

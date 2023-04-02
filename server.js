@@ -4,10 +4,12 @@ const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const hbs = exphbs.create({
   // // Specify the folder for partials
   // partialsDir: 'views/partials',
+  helpers,
   // // Specify the layout template
   // defaultLayout: 'main',
 });
