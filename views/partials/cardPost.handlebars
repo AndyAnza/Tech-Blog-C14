@@ -1,7 +1,13 @@
 <div class='post-container mx-60 my-4 border-2'>
   <h2 class='px-4 py-2 text-2xl'>
     {{title}}
-    <span class='text-base'>Posted by {{user.username}} on 17/13/2023</span>
+    {{!-- <p class='text-base'>Posted by
+      <span class='text-lime-400'>{{user.username}}</span>
+      on 17/13/2023</p> --}}
+    <time datetime='2020-03-16' class='text-base'>Posted by
+      <span class='text-lime-400'>{{user.username}}</span>
+      on
+      {{format_date createdAt}}</time>
   </h2>
   <div>
     <p class='mx-12 my-4 text-xl'>
